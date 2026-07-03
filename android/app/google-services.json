@@ -1,0 +1,105 @@
+{
+  "project_info": {
+    "project_number": "924347123755",
+    "project_id": "talabego",
+    "storage_bucket": "talabego.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:924347123755:android:cc505f87ccb9bc16fb826e",
+        "android_client_info": {
+          "package_name": "com.talabego.customer"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "924347123755-99kb9cqspa7pbihoo72ro7f6ncthmlkq.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.talabego.customer",
+            "certificate_hash": "346377c188d9c5bf768bd11d178fac8de232d413"
+          }
+        },
+        {
+          "client_id": "924347123755-ouhus8mgbhrbug59et1fn5h3d9j23coe.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAsiA2jiEBnoLT-xeU0qVYRT9lpYJv_2SM"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "924347123755-ouhus8mgbhrbug59et1fn5h3d9j23coe.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:924347123755:android:fe76ac535d9655d4fb826e",
+        "android_client_info": {
+          "package_name": "com.talabego.delivery"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "924347123755-ouhus8mgbhrbug59et1fn5h3d9j23coe.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAsiA2jiEBnoLT-xeU0qVYRT9lpYJv_2SM"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "924347123755-ouhus8mgbhrbug59et1fn5h3d9j23coe.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:924347123755:android:4ad3fa5b4393dc94fb826e",
+        "android_client_info": {
+          "package_name": "com.talabego.vendor"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "924347123755-ouhus8mgbhrbug59et1fn5h3d9j23coe.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAsiA2jiEBnoLT-xeU0qVYRT9lpYJv_2SM"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "924347123755-ouhus8mgbhrbug59et1fn5h3d9j23coe.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
