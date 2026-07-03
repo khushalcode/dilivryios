@@ -46,7 +46,7 @@ jobs:
           echo "DEBUG: file size and hash:"
           ls -la certificate.p12
           shasum -a 256 certificate.p12
-          /opt/homebrew/opt/openssl@3/bin/openssl pkcs12 -in certificate.p12 -out certificate_legacy.p12 -legacy -passin pass:"$IOS_P12_PASSWORD" -passout pass:"$IOS_P12_PASSWORD"
+          /opt/homebrew/opt/openssl@3/bin/openssl pkcs12 -in certificate.p12 -out certificate_legacy.p12 -export -legacy -passin pass:"$IOS_P12_PASSWORD" -passout pass:"$IOS_P12_PASSWORD"
           security import certificate_legacy.p12 -k build.keychain -P "$IOS_P12_PASSWORD" -T /usr/bin/codesign -T /usr/bin/security
           security set-key-partition-list -S apple-tool:,apple:,codesign: -s -k "$KEYCHAIN_PASSWORD" build.keychain
           rm certificate.p12
