@@ -1,34 +1,29 @@
 name: iOS Build (IPA Artifact)
-
 on:
   workflow_dispatch:
   push:
     branches: [ main ]
-
 jobs:
   build-ios:
     runs-on: macos-26
-
     steps:
       - name: Checkout repo
         uses: actions/checkout@v4
-
       - name: Set up Flutter
         uses: subosito/flutter-action@v2
         with:
           channel: 'stable'
-
       - name: Install dependencies
         run: |
           flutter pub get
           flutter config --no-enable-swift-package-manager
-
+      - name: Generate app icons
+        run: flutter pub run flutter_launcher_icons
       - name: Install CocoaPods
         run: |
           cd ios
           rm -rf Pods Podfile.lock
           pod install --repo-update
-
       # --- Signing setup ---
       - name: Create temporary keychain
         env:
@@ -38,7 +33,6 @@ jobs:
           security set-keychain-settings -lut 21600 build.keychain
           security unlock-keychain -p "$KEYCHAIN_PASSWORD" build.keychain
           security list-keychains -d user -s build.keychain $(security list-keychains -d user | sed 's/"//g')
-
       - name: Import signing certificate
         env:
           IOS_P12_BASE64: ${{ secrets.IOS_P12_BASE64 }}
@@ -54,7 +48,6 @@ jobs:
           security import certificate_legacy.p12 -k build.keychain -P "$IOS_P12_PASSWORD" -T /usr/bin/codesign -T /usr/bin/security
           security set-key-partition-list -S apple-tool:,apple:,codesign: -s -k "$KEYCHAIN_PASSWORD" build.keychain
           rm certificate.p12
-
       - name: Install provisioning profile
         env:
           IOS_PROVISION_BASE64: ${{ secrets.IOS_PROVISION_BASE64 }}
@@ -63,13 +56,11 @@ jobs:
           echo "$IOS_PROVISION_BASE64" | base64 --decode > profile.mobileprovision
           cp profile.mobileprovision ~/Library/MobileDevice/Provisioning\ Profiles/
           rm profile.mobileprovision
-
       # --- Build ---
       - name: Flutter build iOS (no codesign, archive handles signing)
         run: |
           flutter config --no-enable-swift-package-manager
           flutter build ios --release --no-codesign
-
       - name: Archive with Xcode
         run: |
           cd ios
@@ -84,7 +75,6 @@ jobs:
             CODE_SIGN_IDENTITY="Apple Distribution: Ahmed Ghozlane (GYY8K392ZW)" \
             DEVELOPMENT_TEAM=${{ secrets.IOS_TEAM_ID }} \
             PRODUCT_BUNDLE_IDENTIFIER=${{ secrets.IOS_BUNDLE_ID }}
-
       - name: Export IPA
         run: |
           cd ios
@@ -92,13 +82,11 @@ jobs:
             -archivePath $PWD/build/Runner.xcarchive \
             -exportOptionsPlist ExportOptions.plist \
             -exportPath $PWD/build/ipa
-
       - name: Upload IPA artifact
         uses: actions/upload-artifact@v4
         with:
           name: talabego-delivery-ipa
           path: ios/build/ipa/*.ipa
-
       # --- Cleanup ---
       - name: Clean up keychain
         if: always()
