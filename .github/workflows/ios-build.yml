@@ -39,6 +39,7 @@ jobs:
           IOS_P12_PASSWORD: ${{ secrets.IOS_P12_PASSWORD }}
           KEYCHAIN_PASSWORD: ${{ secrets.KEYCHAIN_PASSWORD }}
         run: |
+          echo "DEBUG: IOS_P12_BASE64 length = ${#IOS_P12_BASE64}"
           echo "$IOS_P12_BASE64" | base64 --decode > certificate.p12
           echo "DEBUG: file size and hash:"
           ls -la certificate.p12
