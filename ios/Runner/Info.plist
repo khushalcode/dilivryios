@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
@@ -62,5 +62,11 @@
 	<false/>
 	<key>UIApplicationSupportsIndirectInputEvents</key>
 	<true/>
+<key>NSLocationAlwaysAndWhenInUseUsageDescription</key>
+<string>Talabo Delivery needs access to your location in the background so we can track your position while you're delivering orders, even when the app isn't in the foreground.</string>
+<key>NSLocationWhenInUseUsageDescription</key>
+<string>Talabo Delivery needs access to your location to show your position on the map and navigate to delivery addresses.</string>
+<key>NSLocationAlwaysUsageDescription</key>
+<string>Talabo Delivery needs access to your location in the background so we can track your position while you're delivering orders.</string>
 </dict>
 </plist>
