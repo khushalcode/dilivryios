@@ -7,7 +7,7 @@
 <key>teamID</key>
 <string>GYY8K392ZW</string>
 <key>signingStyle</key>
-<string>manual</string>
+<string>automatic</string>
 <key>provisioningProfiles</key>
 <dict>
 <key>com.talabego.delivery</key>
