@@ -1,6 +1,6 @@
 name: sixam_mart_delivery
 description: A new Flutter application.
-publish_to: 'none' #
+publish_to: 'none'
 version: 2.0.0+5
 
 environment:
@@ -11,7 +11,7 @@ dependencies:
     sdk: flutter
 
   cupertino_icons: ^1.0.8
-  get: #^4.7.2
+  get:
     git:
       url: https://github.com/luis901101/getx_fork.git
       ref: old-4.7.0
@@ -35,11 +35,7 @@ dependencies:
   phone_numbers_parser: ^9.0.15
   country_code_picker: ^3.4.1
   audioplayers: ^6.5.1
-<<<<<<< HEAD
   flutter_widget_from_html_core: ^0.15.0
-=======
-  flutter_widget_from_html_core: ^0.17.0
->>>>>>> b3f2b0739729edfe0be67650a3b4f6ce6017991a
   cached_network_image: ^3.4.1
   path: ^1.9.1
   http_parser: ^4.1.2
@@ -60,11 +56,7 @@ dev_dependencies:
   flutter_launcher_icons: ^0.14.4
   flutter_test:
     sdk: flutter
-<<<<<<< HEAD
   flutter_lints: ^5.0.0
-=======
-  flutter_lints: ^6.0.0
->>>>>>> b3f2b0739729edfe0be67650a3b4f6ce6017991a
 
 flutter:
   uses-material-design: true
