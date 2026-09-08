@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>CLIENT_ID</key>
+	<string>924347123755-lh1qvvf9dkea6d16sq07eq8mqqkcet7h.apps.googleusercontent.com</string>
+	<key>REVERSED_CLIENT_ID</key>
+	<string>com.googleusercontent.apps.924347123755-lh1qvvf9dkea6d16sq07eq8mqqkcet7h</string>
+	<key>ANDROID_CLIENT_ID</key>
+	<string>924347123755-99kb9cqspa7pbihoo72ro7f6ncthmlkq.apps.googleusercontent.com</string>
+	<key>API_KEY</key>
+	<string>AIzaSyAB9vbYCP6lzVR5fX6c4-JBEBOfP81XDGk</string>
+	<key>GCM_SENDER_ID</key>
+	<string>924347123755</string>
+	<key>PLIST_VERSION</key>
+	<string>1</string>
+	<key>BUNDLE_ID</key>
+	<string>com.talabego.delivery</string>
+	<key>PROJECT_ID</key>
+	<string>talabego</string>
+	<key>STORAGE_BUCKET</key>
+	<string>talabego.firebasestorage.app</string>
+	<key>IS_ADS_ENABLED</key>
+	<false></false>
+	<key>IS_ANALYTICS_ENABLED</key>
+	<false></false>
+	<key>IS_APPINVITE_ENABLED</key>
+	<true></true>
+	<key>IS_GCM_ENABLED</key>
+	<true></true>
+	<key>IS_SIGNIN_ENABLED</key>
+	<true></true>
+	<key>GOOGLE_APP_ID</key>
+	<string>1:924347123755:ios:4c45e2c0206f0a7dfb826e</string>
+</dict>
+</plist>
